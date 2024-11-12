@@ -1,4 +1,7 @@
-import { Bleed, Callout, Cards, ExpressionEvaluator, FileTree, npm2yarn } from 'nextra-theme-docs'
+import { Bleed, Callout, Cards, ExpressionEvaluator} from 'nextra-theme-docs'
+import FileTree from '../components/FileTree'
+
+## Bleed
 
 <Bleed>Hey, I can use **Markdown** syntax here.</Bleed>
 
@@ -13,6 +16,8 @@ import { Bleed, Callout, Cards, ExpressionEvaluator, FileTree, npm2yarn } from '
   />
 </Bleed>
 
+## Callouts
+
 <Callout type="info" emoji="ℹ️">
   Este es un ejemplo de un callout informativo. Puedes usar **Markdown** aquí también.
 </Callout>
@@ -25,12 +30,15 @@ import { Bleed, Callout, Cards, ExpressionEvaluator, FileTree, npm2yarn } from '
   Este es un ejemplo de un callout de error. Algo salió mal.
 </Callout>
 
+## Code extension
+
 ```js filename="demo.js" copy {3} showLineNumbers
 let a = 1;
 
 console.log(a);
 ```
 
+## ANSI
 
 ```ansi
 [0m [0;32m✓[0m [0;2msrc/[0mindex[0;2m.test.ts (1)[0m
@@ -42,6 +50,35 @@ console.log(a);
          [0;2mpress [0;1mh[0;2m to show help, press [0;1mq[0;2m to quit
 ```
 
+## npm2yarn
+
 ```sh npm2yarn
 npm i -D @graphql-eslint/eslint-plugin
 ```
+
+## Expressions Evaluation
+
+Current year - {new Date().getFullYear()}
+ 
+🧑‍💻 JavaScript expressions {2 * Math.PI}
+
+## Variable declaration
+
+export const  author = 'John Doe'
+ 
+The author is **{ author }**
+
+## File trees
+
+<FileTree>
+  <FileTree.Folder name="pages" defaultOpen>
+    <FileTree.File name="_meta.json" />
+    <FileTree.File name="contact.md" />
+    <FileTree.File name="index.mdx" />
+    <FileTree.Folder name="about">
+      <FileTree.File name="_meta.json" />
+      <FileTree.File name="legal.md" />
+      <FileTree.File name="index.mdx" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
